@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 
 class IdSearch extends React.Component {
     idGrabber(event){
         
         let formId = document.querySelector("#pokeId");
                     
-        fetch("http://localhost:3000//api/pokemon/id/" + formId.value).then((res) => {
+        fetch("/api/pokemon/id/" + formId.value).then((res) => {
             return res.json();
         
         }).then((processed) => {

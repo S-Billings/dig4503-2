@@ -2,7 +2,7 @@ class Home extends React.Component {
 
     getName() {
       let formName = document.querySelector("#pokeName");
-      fetch("/api/pokemon/name/" + formName.value.toLowerCase())
+      fetch("/api/pokemon/name/" + formName.value)
       .then((res) => { return res.json(); } )
       .then((processed) => {
         let resultElement = document.querySelector("#reportingArea");
@@ -15,6 +15,7 @@ class Home extends React.Component {
     }
     getId() {
         let formId = document.querySelector("#pokeId");
+
         fetch("/api/pokemon/id/" + formId.value)
         .then((res) => { return res.json(); } )
         .then((processed) => {

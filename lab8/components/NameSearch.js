@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 class NameSearch extends React.Component {
     nameGrabber(event){
@@ -6,7 +6,7 @@ class NameSearch extends React.Component {
                     
         let formName = document.querySelector("#pokeName");
         
-        fetch("http://localhost:3000/api/pokemon/name/" + formName.value).then((res) => {
+        fetch("/api/pokemon/name/" + formName.value).then((res) => {
             return res.json();
 
         }).then((processed) => {
